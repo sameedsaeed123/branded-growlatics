@@ -1,0 +1,10 @@
+ErrorDocument 404 /index-2.html
+DirectoryIndex index-2.html index.html
+
+# Redirect any invalid routes to index-2.html
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index-2.html [L]
+</IfModule>

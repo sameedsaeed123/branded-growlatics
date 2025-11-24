@@ -1,0 +1,49 @@
+/* Responsive Hero Image Fix */
+.breadcrumb__area {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Mobile responsiveness for hero sections */
+@media only screen and (max-width: 767px) {
+    .breadcrumb__area {
+        background-size: cover !important;
+        background-position: 70% center !important;
+        min-height: 300px;
+    }
+    
+    .breadcrumb__height {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .breadcrumb__content {
+        padding: 0 15px;
+    }
+    
+    .breadcrumb__title {
+        font-size: 32px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .breadcrumb__area {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    .breadcrumb__height {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+/* Ensure images don't overflow on mobile */
+@media only screen and (max-width: 767px) {
+    .tp-about-3__thumb img,
+    .tp-contact__thumb img {
+        max-width: 100%;
+        height: auto;
+    }
+}
