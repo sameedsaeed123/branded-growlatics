@@ -10389,7 +10389,7 @@ body .ui-tooltip {
 .tp-stat-number{font-size:34px;color:var(--tp-theme-1);font-weight:800;margin-bottom:6px}
 .tp-stat-label{color:var(--tp-common-black-5);font-weight:600}
 .tp-stats-cta{text-align:center;margin-top:26px}
-.tp-stats-cta .tp-btn{background:var(--tp-theme-1);color:#fff;padding:10px 28px;border-radius:999px;font-weight:700}
+.tp-stats-cta .tp-btn{background:var(--tp-theme-1);color:#fff;padding:14px 34px;border-radius:999px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;height:auto;line-height:normal}
 
 @media (max-width: 767px){
   .tp-stat-icon{width:60px;height:60px}
