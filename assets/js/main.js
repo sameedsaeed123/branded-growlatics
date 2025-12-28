@@ -901,3 +901,54 @@
 
 
 })(jQuery);
+
+// Brand-price carousel population (adds slides and initializes Swiper)
+(function(){
+	try{
+		var brandData = [
+			{img: 'assets/img/brand/directv.webp', name: 'DirecTV', base: 65},
+			{img: 'assets/img/brand/earthlink.webp', name: 'EarthLink', base: 50},
+			{img: 'assets/img/brand/Frontier.webp', name: 'Frontier', base: 45},
+			{img: 'assets/img/brand/hughesnet.webp', name: 'HughesNet', base: 55},
+			{img: 'assets/img/brand/optimum.webp', name: 'Optimum', base: 60},
+			{img: 'assets/img/brand/viasat.webp', name: 'Viasat', base: 70},
+			{img: 'assets/img/brand/at&t.svg', name: 'AT&T', base: 58}
+		];
+
+		var wrapper = document.querySelector('.tp-brand-price__slider-container .swiper-wrapper');
+		if(!wrapper) return;
+
+		brandData.forEach(function(b){
+			var price = Math.max( Math.round((b.base - 10) * 1), 5 );
+			var slide = document.createElement('div');
+			slide.className = 'swiper-slide';
+			slide.innerHTML = '<div class="brand-price-card">'
+				+ '<div class="brand-img"><img src="'+b.img+'" alt="'+b.name+'"></div>'
+				+ '<h4>'+b.name+'</h4>'
+				+ '<div class="price">$'+price+'<span style="font-weight:400;font-size:12px">/mo</span></div>'
+				+ '<a class="tp-btn-border-sm" href="tel:+16147458333">Call</a>'
+				+ '</div>';
+			wrapper.appendChild(slide);
+		});
+
+		var brandPriceSwiper = new Swiper('.tp-brand-price__slider-container', {
+			slidesPerView: 4,
+			spaceBetween: 24,
+			loop: true,
+			autoplay: {delay: 3000},
+			breakpoints: {
+				1400: {slidesPerView: 4},
+				1200: {slidesPerView: 4},
+				992: {slidesPerView: 3},
+				768: {slidesPerView: 2},
+				576: {slidesPerView: 2},
+				0: {slidesPerView: 1}
+			},
+			pagination: {el: '.tp-brand-price__slider-container .swiper-pagination', clickable: true},
+			a11y: false
+		});
+
+		// Note: base prices are local samples. To use live prices, replace the brandData base values
+		// with values fetched from an API and then re-render slides (fetching not implemented here).
+	}catch(e){console.error('brand-price init error',e)}
+})();
