@@ -2114,8 +2114,8 @@ div.demo img {
   border-bottom: 5px solid transparent;
   border-left: 5px solid #FFF;
   border-right: 5px solid transparent;
-  -webkit-animation: animate 2s infinite;
-  animation: animate 2s infinite;
+  -webkit-animation: animate 1s infinite;
+  animation: animate 1s infinite;
 }
 
 #object_one {

@@ -30,8 +30,12 @@
 	var windowOn = $(window);
 	////////////////////////////////////////////////////
 	// 01. PreLoader Js
+	// Hide preloader quickly when DOM is ready to improve perceived speed, keep load fallback
+	$(document).ready(function(){
+		setTimeout(function(){ $("#loading").fadeOut(200); }, 150);
+	});
 	windowOn.on('load', function () {
-		$("#loading").fadeOut(500);
+		$("#loading").fadeOut(200);
 	});
 
 
