@@ -14938,4 +14938,31 @@ p.checkout-coupon input[type=text]:focus {
   right: 0;
 }
 
+/* Newsletter (footer) specific styles to match provided screenshot */
+.tp-footer__widget.footer-col-2-3 .tp-footer__from {
+  background: #1f2023;
+  padding: 30px 28px;
+  border-radius: 6px;
+  color: #cfcfd1;
+}
+.tp-footer__widget.footer-col-2-3 .tp-footer__text-email { position: relative; }
+.tp-footer__widget.footer-col-2-3 .tp-footer__text-email input[type="email"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #cfcfd1;
+  padding: 14px 44px 12px 0;
+  width: 100%;
+  outline: none;
+}
+.tp-footer__widget.footer-col-2-3 .tp-footer__text-email input::placeholder { color: rgba(255,255,255,0.35); }
+.tp-footer__widget.footer-col-2-3 .tp-footer__text-email span { position: absolute; right: 8px; top: 10px; }
+.tp-footer__widget.footer-col-2-3 .tp-footer__agree { margin-top: 18px; align-items: center; }
+.tp-footer__widget.footer-col-2-3 .tp-footer__agree input[type="checkbox"] {
+  width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); background: transparent; -webkit-appearance: none; appearance: none; position: relative;
+}
+.tp-footer__widget.footer-col-2-3 .tp-footer__agree input[type="checkbox"]:checked { background: var(--tp-theme-2); border-color: var(--tp-theme-2); }
+.tp-footer__widget.footer-col-2-3 .tp-footer__agree label { margin-left: 12px; color: #cfcfd1; font-size: 15px; }
+.tp-footer__widget.footer-col-2-3 .tp-footer__agree label a, .tp-footer__widget.footer-col-2-3 .tp-footer__agree label span { color: var(--tp-theme-2); font-weight: 700; }
+
 /*# sourceMappingURL=main.css.map */

@@ -371,9 +371,15 @@
                   <div class="tp-footer__widget footer-col-2-3">
                      <h3 class="tp-footer__widget-title">Newsletter</h3>
                      <div class="tp-footer__from">
-                        <form action="#" method="POST" class="tp-footer__text-email p-relative" data-emailjs-service="YOUR_SERVICE_ID" data-emailjs-template="YOUR_NEWSLETTER_TEMPLATE_ID" data-emailjs-user="YOUR_PUBLIC_KEY">
-                           <input type="hidden" name="to_email" value="support@fibercabledeals.com">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="tp-footer__text-email p-relative">
+                           <input type="hidden" name="access_key" value="f073b2b0-8d24-42b8-a3d6-ac2149179113">
+                           <input type="hidden" name="subject" value="Newsletter Signup">
+                           <input type="hidden" name="name" value="Subscriber">
                            <input name="email" type="email" placeholder="Enter Email Address" required>
+                           <div class="tp-footer__agree d-flex align-items-start mt-3">
+                              <input class="e-check-input" type="checkbox" id="e-agree-404" name="agree_terms" value="1">
+                              <label for="e-agree-404" style="margin-left:10px;">I agree all your <a href="privacy-policy.html">terms</a> and policies</label>
+                           </div>
                            <button type="submit" class="tp-btn-subscribe">
                               <svg width="25" height="21" viewBox="0 0 25 21" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -383,13 +389,8 @@
                               </svg>
                            </button>
                         </form>
-                        <div class="tp-footer__agree d-flex align-items-start">
-                           <input class="e-check-input" type="checkbox" id="e-agree">
-                           <label class="e-check-label" for="e-agree">I agree all your <span>terms</span> and
-                              policies</label>
-                        </div>
-                       
-                     </div>
+                     
+                  </div> 
                   </div>
                </div>
             </div>
