@@ -1,10 +1,16 @@
-ErrorDocument 404 /index-2.html
+# Set default index file
 DirectoryIndex index-2.html index.html
 
-# Redirect any invalid routes to index-2.html
+# Custom 404 error page
+ErrorDocument 404 /404.html
+
+# Enable URL rewriting
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
+    
+    # If the requested file or directory doesn't exist, show 404
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index-2.html [L]
+    RewriteRule ^(.*)$ /404.html [L,R=404]
 </IfModule>

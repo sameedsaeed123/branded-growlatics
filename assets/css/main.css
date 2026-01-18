@@ -5889,7 +5889,7 @@ body .ui-tooltip {
   }
 }
 .tp-header-2__menu > nav > ul > li:nth-child(3) {
-  margin-right: 250px;
+  margin-right: 25px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-header-2__menu > nav > ul > li:nth-child(3) {
@@ -14964,5 +14964,36 @@ p.checkout-coupon input[type=text]:focus {
 .tp-footer__widget.footer-col-2-3 .tp-footer__agree input[type="checkbox"]:checked { background: var(--tp-theme-2); border-color: var(--tp-theme-2); }
 .tp-footer__widget.footer-col-2-3 .tp-footer__agree label { margin-left: 12px; color: #cfcfd1; font-size: 15px; }
 .tp-footer__widget.footer-col-2-3 .tp-footer__agree label a, .tp-footer__widget.footer-col-2-3 .tp-footer__agree label span { color: var(--tp-theme-2); font-weight: 700; }
+
+/* Hide header top bar on all pages */
+.tp-header-top__area, .tp-header-top-2__area, .tp-header-top-3__area { display: none !important; }
+
+/* Hide social icons in mobile navbar */
+.tpoffcanvas__social { display: none !important; }
+
+/* Reduce header vertical space */
+.tp-header-2__menu > nav > ul > li > a {
+  padding: 12px 0 !important;
+}
+.tp-header-main__menu > nav > ul > li > a {
+  padding: 12px 0 !important;
+}
+.tp-header-2__menu-box {
+  padding: 5px 0 !important;
+}
+.tp-header-3__customize {
+  padding: 5px 0 !important;
+}
+.tp-header-2__logo img {
+  max-height: 60px !important;
+}
+.tp-header-2__logo-middle img {
+  max-height: 70px !important;
+}
+.tp-header-3__logo img,
+.tp-header-3__logo-lg img,
+.tp-header-main__logo img {
+  max-height: 60px !important;
+}
 
 /*# sourceMappingURL=main.css.map */
